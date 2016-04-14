@@ -1,7 +1,7 @@
 var END_POINT         = 'https://semaphoreci.com/api/v1/'
   , END_POINT_TOKEN   = '?auth_token=' + localStorage.getItem('semaphoreUserToken')
   , SOCKET_END_POINT  = 'https://semaphorewatcherserver.herokuapp.com/'
-  , STATUES           = ['passed', 'failed', 'stopped', '0'];
+  , STATUES_PROGRESS  = { passed: 100, failed: 0, stopped: 0, pending: 50 };
 
 var SemaphoreWatcher = function () {
   this.fetchProjects();
@@ -34,15 +34,16 @@ SemaphoreWatcher.prototype.save = function (key, data) {
 };
 
 SemaphoreWatcher.prototype.notify = function (project, data) {
-  var instance = this;
+  var instance = this,
+    status = data.status.toLowerCase();
 
   chrome.notifications.clear('notify.semaphore');
 
   var opt = {
     type: 'progress',
-    iconUrl: '../../images/semaphore_' + data.status.toLowerCase() + '.png',
+    iconUrl: '../../images/semaphore_' + status + '.png',
     title: '#' + data.build_number + ' - ' + project.name + ' (' + data.status.toUpperCase() + ')',
-    progress: 100,
+    progress: STATUES_PROGRESS[status],
     message: data.message,
     priority: 1
   };
