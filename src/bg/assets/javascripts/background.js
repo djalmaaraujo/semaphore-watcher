@@ -1,7 +1,7 @@
 var END_POINT         = 'https://semaphoreci.com/api/v1/'
-  , END_POINT_TOKEN   = '?auth_token=' + localStorage.getItem('semaphoreUserToken')
-  , SOCKET_END_POINT  = 'https://semaphorewatcherserver.herokuapp.com/'
-  , STATUES_PROGRESS  = { passed: 100, failed: 0, stopped: 0, pending: 50 };
+, END_POINT_TOKEN   = '?auth_token=' + localStorage.getItem('semaphoreUserToken')
+, SOCKET_END_POINT  = 'https://semaphorewatcherserver.herokuapp.com/'
+, STATUES_PROGRESS  = { passed: 100, failed: 0, stopped: 0, pending: 50 };
 
 var SemaphoreWatcher = function () {
   this.fetchProjects();
@@ -18,7 +18,7 @@ SemaphoreWatcher.prototype.fetchProjects = function () {
 
 SemaphoreWatcher.prototype.getProject = function (hashId) {
   var instance = this
-    , projects = instance.getProjects();
+  , projects = instance.getProjects();
 
   return _.find(projects, function(o) { return o.hash_id === hashId });
 };
@@ -35,7 +35,7 @@ SemaphoreWatcher.prototype.save = function (key, data) {
 
 SemaphoreWatcher.prototype.notify = function (project, data) {
   var instance = this,
-    status = data.status.toLowerCase();
+  status = data.status.toLowerCase();
 
   chrome.notifications.clear('notify.semaphore');
 
@@ -56,7 +56,7 @@ SemaphoreWatcher.prototype.notify = function (project, data) {
 
 SemaphoreWatcher.prototype.bindSocket = function () {
   var instance = this
-    , socket = io.connect(SOCKET_END_POINT);
+  , socket = io.connect(SOCKET_END_POINT);
 
   socket.on('build', function (data) {
     var project = instance.getProject(data.project);

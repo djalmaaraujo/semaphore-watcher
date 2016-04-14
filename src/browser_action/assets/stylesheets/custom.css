@@ -1,0 +1,37 @@
+html {
+  height: auto !important;
+  background: #f2f2e9;
+}
+
+body {
+  overflow: hidden;
+  height: auto !important;
+  background: #f2f2e9;
+}
+
+#mainPopup {
+  padding: 0 20px;
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mainPopup--formUI {
+  height: 280px;
+}
+
+.mainPopup--answerUI {
+  height: 200px;
+}
+
+.mainPopup--progressUI {
+  height: 160px;
+}
+
+.logo {
+  width: 70px;
+  display: block;
+  margin: 20px auto 20px auto;
+}
+
+textarea, input { outline: none; text-align: center; }
