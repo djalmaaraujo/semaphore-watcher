@@ -14,8 +14,7 @@
 
   "default_locale": "en",
   "background": {
-    "page": "src/bg/background.html",
-    "persistent": false
+    "page": "src/bg/background.html"
   },
 
   "browser_action": {
