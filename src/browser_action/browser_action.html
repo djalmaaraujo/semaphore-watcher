@@ -1,0 +1,63 @@
+<!doctype html>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../css/pure.css">
+<link rel="stylesheet" href="../../css/baby-blue.css">
+
+<style type="text/css">
+	#mainPopup {
+		padding: 0 20px;
+		height: 180px;
+		width: 300px;
+        margin: 0 auto;
+		font-family: 'Open Sans', sans-serif;
+        text-align: center;
+	}
+
+    form {
+        padding: 0 30px;
+    }
+
+    input, button {
+        text-align: center;
+    }
+
+    div .button-success {
+        background: rgb(28, 184, 65); /* this is a green */
+        color: white;
+        border-radius: 4px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .content .content-subhead {
+        margin: 1em 0 1em 0;
+    }
+
+    #answer {
+        display: none;
+    }
+</style>
+
+<script src="../../js/jquery/jquery.js"></script>
+<script src="browser_action.js"></script>
+
+<div id="mainPopup">
+    <div class="content">
+        <h2 class="content-subhead">Semaphore Watcher :)</h2>
+
+        <div id="form">
+            <form class="pure-form pure-form-stacked">
+                <input id="token" type="text" class="pure-input-1" placeholder="Paste your token here" />
+                <button id="save" type="button" class="button-success pure-button pure-input-1">Save</button>
+            </form>
+
+            <br />
+            <a href="https://semaphoreci.com/users/edit" target="_blank"><strong>I don't know where is my token</strong></a>
+        </div>
+
+        <div id="answer">
+            <p>Your token is saved.</p>
+            <a href="#" id="edit-button">Edit</a>
+        </div>
+
+    </div>
+</div>
