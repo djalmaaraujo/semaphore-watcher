@@ -37,7 +37,6 @@ SemaphoreWatcher.prototype.notify = function (project, data) {
   var instance = this,
   status = data.status.toLowerCase();
 
-  chrome.notifications.clear('notify.semaphore');
 
   var opt = {
     type: 'progress',
@@ -48,9 +47,17 @@ SemaphoreWatcher.prototype.notify = function (project, data) {
     priority: 1
   };
 
-  chrome.notifications.create('notify.semaphore', opt, function() {});
-  chrome.notifications.onClicked.addListener(function () {
-    chrome.tabs.create({ url: data.build_url });
+  chrome.notifications.create(opt, function (createdId) {
+
+    var handler = function(id) {
+      if (id == createdId) {
+        chrome.tabs.create({ url: data.build_url });
+        chrome.notifications.clear(createdId);
+        chrome.notifications.onClicked.removeListener(handler);
+      }
+    };
+
+    chrome.notifications.onClicked.addListener(handler);
   });
 };
 
