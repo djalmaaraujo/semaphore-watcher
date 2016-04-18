@@ -11,4 +11,4 @@ Watch your project builds on semaphoreci.com
 
 
 ## Installation
-Go to: [https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.1-beta](https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.1-beta)
+Go to: [https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.2-beta](https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.2-beta)

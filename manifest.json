@@ -1,6 +1,6 @@
 {
   "name": "Semaphore Watcher",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Watch for your project builds on Semaphore",
   "homepage_url": "https://github.com/djalmaaraujo/semaphore-watcher",
