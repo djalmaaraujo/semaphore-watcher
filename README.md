@@ -1,14 +1,7 @@
 # Semaphore Watcher
-![Watcher Screenshot](https://raw.githubusercontent.com/djalmaaraujo/semaphore-watcher/master/images/semaphore.png "Status")
 
-Watch your project builds on semaphoreci.com
+I am not continuing with this app, because chrome store has some stupid rules, so I decided to build a desktop app with Electron.
 
-## Screenshots
-![Watcher Screenshot](https://raw.githubusercontent.com/djalmaaraujo/semaphore-watcher/master/images/screenshots/app.png "Status")
-![Watcher Screenshot](https://raw.githubusercontent.com/djalmaaraujo/semaphore-watcher/master/images/screenshots/passed.png "Status")
-![Watcher Screenshot](https://raw.githubusercontent.com/djalmaaraujo/semaphore-watcher/master/images/screenshots/pending.png "Status")
-![Watcher Screenshot](https://raw.githubusercontent.com/djalmaaraujo/semaphore-watcher/master/images/screenshots/stopped.png "Status")
+Here's the new repo: [Semaphore Menubar](https://github.com/djalmaaraujo/semaphore-menubar)
 
-
-## Installation
-Go to: [https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.2-beta](https://github.com/djalmaaraujo/semaphore-watcher/releases/tag/0.0.2-beta)
+Thanks :)
