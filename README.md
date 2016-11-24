@@ -1,4 +1,4 @@
-# Semaphore Watcher
+# [DEPRECATED] Semaphore Watcher
 
 I am not continuing with this app, because chrome store has some stupid rules, so I decided to build a desktop app with Electron.
 
